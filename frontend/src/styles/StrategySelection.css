@@ -1,0 +1,31 @@
+.strategy-selection-page {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.strategy-button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.strategy-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  transition: 0.3s;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.strategy-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}

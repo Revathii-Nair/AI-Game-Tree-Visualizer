@@ -1,0 +1,119 @@
+.grid-select-page {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.grid-select-title {
+  font-family: "Orbitron", monospace;
+  margin: 0;
+}
+
+.grid-select-subtitle {
+  color: var(--text2);
+  margin: 0;
+}
+
+.grid-select-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.selection-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 34px 28px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  box-shadow: var(--shadow-m);
+  transform: translateY(0) scale(1);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: fadeUp 0.55s ease both;
+}
+.selection-icon-img {
+  width: 2.6rem;
+  height: 2.6rem;
+  transition: filter 0.3s;
+}
+
+.selection-card:hover .selection-icon-img {
+  filter: drop-shadow(0 0 12px var(--card-glow));
+}
+
+.selection-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.selection-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.selection-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.selection-card:hover {
+  border-color: var(--card-accent);
+  /* Matches the exact glow and border ring from Home */
+  box-shadow:
+    0 14px 44px var(--card-glow),
+    0 0 0 1px var(--card-accent);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.selection-icon {
+  font-size: 2.8rem;
+  transition: filter 0.3s;
+}
+
+.selection-card:hover .selection-icon {
+  filter: drop-shadow(0 0 12px var(--card-glow));
+}
+
+.selection-title {
+  font-family: "Orbitron", monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 4px;
+  color: var(--text);
+  transition: color 0.25s;
+  margin-bottom: 0;
+}
+
+.selection-card:hover .selection-title {
+  color: var(--card-accent);
+}
+
+.selection-desc {
+  color: var(--text2);
+  font-size: 0.84rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.selection-tag {
+  font-weight: bold;
+  color: var(--card-accent);
+  margin-top: auto;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

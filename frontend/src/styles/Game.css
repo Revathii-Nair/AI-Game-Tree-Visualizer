@@ -1,0 +1,217 @@
+.game-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: calc(100vh - 68px);
+  gap: 40px;
+  padding: 20px;
+  transition: max-width 0.6s ease;
+  overflow: hidden;
+}
+
+.game-board-container {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-visualizer-container {
+  flex: 1;
+  min-width: 690px;
+}
+
+.score-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 16px;
+}
+
+.score-block {
+  text-align: center;
+  min-width: 100px;
+}
+
+.score-symbol {
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-family: "Orbitron", monospace;
+}
+.score-name {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+.score-stats {
+  color: var(--text2);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.turn-heading {
+  color: var(--text2);
+  font-family: "Orbitron", monospace;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.game-cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: 900;
+  border-radius: 10px;
+  transition: background 0.3s;
+  font-family: "Orbitron", monospace;
+}
+
+.ai-stats-wrapper {
+  height: 86px;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 20px;
+}
+
+.ai-stats-box {
+  height: 100%;
+  padding: 12px 20px;
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+.game-buttons-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.game-btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.game-btn-secondary {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.result-overlay-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.result-overlay-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 36px 40px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 260px;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+.visualizer-container {
+  height: 550px;
+  background-color: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.visualizer-header {
+  background: var(--border);
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.visualizer-content {
+  padding: 15px;
+  overflow-y: auto;
+  flex: 1;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.visualizer-empty {
+  color: var(--text2);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.visualizer-line {
+  margin-bottom: 4px;
+}
+
+.log-pruned {
+  color: var(--danger);
+}
+.log-imagines {
+  color: var(--cyan);
+}
+
+.log-result {
+  color: #a78bfa;
+  font-style: italic;
+}
+
+.log-success {
+  color: var(--success);
+}
+
+.log-normal {
+  color: var(--text);
+}

@@ -1,4 +1,4 @@
-# Tic Tac Toe: AI Algorithm Showcase (MERN)
+# AI Search-Tree Visualizer: Minimax & Alpha-Beta Showcase (MERN)
 
 This is a full-stack web application designed to demonstrate and compare how search algorithms function. By playing Tic Tac Toe, you can observe the real-time performance of **Minimax** and **Alpha-Beta Pruning**.
 
@@ -44,7 +44,7 @@ This application tracks and displays specific data points to show the efficiency
 ## Project Structure
 
 ```text
-tic-tac-toe-mern/
+AI-Search-Tree-Visualizer/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
@@ -66,8 +66,8 @@ tic-tac-toe-mern/
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/revathii-nair/tic-tac-toe.git
-cd tic-tac-toe
+https://github.com/Revathii-Nair/AI-Game-Tree-Visualizer.git
+cd AI-Game-Tree-Visualizer
 
 ```
 
